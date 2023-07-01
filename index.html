@@ -5,8 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Welcome to portfolio</h1>
+    <div class="container">
+        <div class="avatar">
+             <img src="https://picsum.photos/300/300" alt="no image">
+        </div>
+         <div class="username">
+            <h1>Sandip</h1>
+         </div>
+         <div class="button" data-target="#about">
+            <i class="fa-solid fa-address-card"></i>
+            <span class="button_text">About</span>
+        </div>
+        <div class="button" data-target="#resume">
+            <i class="fa-solid fa-file"></i>
+            <span class="button_text">Resume</span>
+        </div>
+        <div class="button" data-target="#project">
+            <i class="fa-solid fa-list-check"></i>
+            <span class="button_text">Project</span>
+        </div>
+        <div class="button" data-target="#contact">
+            <i class="fa-regular fa-id-badge"></i>
+            <span class="button_text">Contact</span>
+        </div>
+
+    </div>
+    <div class="social-icons">
+        <a target="-blank" href="https://facebook.com">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a target="_blank" href="https://twitter.com">
+        <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a target="_blank" href="https://linkedin.com">
+        <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a target="-blank" href="https://github.com">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+    <!-- pages-->
+    <!--about pages-->
+    <section class="page" id="about">
+        <div class="page-header">
+            <div class="page-title">About</div>
+             <div class="page-close">
+            <i class="fa-solid fa-xmark"></i>
+             </div>
+        </div>
+      <div class="page-body">
+           <h3 class="page-title">About Content</h3>
+      </div>
+    </section>
+
+    <!--resume page -->
+    <section class="page" id="resume">
+        <div class="page-header">
+            <div class="page-title">Resume</div>
+             <div class="page-close">
+            <i class="fa-solid fa-xmark"></i>
+             </div>
+        </div>
+      <div class="page-body">
+           <h3 class="page-title">Resume Content</h3>
+      </div>
+    </section>
+
+    <!-- project page-->
+    <section class="page" id="project">
+        <div class="page-header">
+            <div class="page-title">Project</div>
+             <div class="page-close">
+            <i class="fa-solid fa-xmark"></i>
+             </div>
+        </div>
+      <div class="page-body">
+           <h3 class="page-title">Project Content</h3>
+      </div>
+    </section>
+
+    <!-- contact page -->
+    <section class="page" id="contact">
+        <div class="page-header">
+            <div class="page-title">contact</div>
+             <div class="page-close">
+            <i class="fa-solid fa-xmark"></i>
+             </div>
+        </div>
+      <div class="page-body">
+           <h3 class="page-title">Contact Me</h3>
+      </div>
+    </section>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>

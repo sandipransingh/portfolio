@@ -1,6 +1,126 @@
-* {
+*{
     box-sizing: border-box;
 }
 body {
-    background-color: #00e501;
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+    background-size: 400% 400%;
+    position: relative;
+    animation: bgAnim 30s ease infinite;
+}
+
+/* animation code */
+@keyframes bgAnim {
+    0% {
+    background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* container */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding-block: 5vh;
+    gap: 0.57rem;
+}
+/* image */
+.container .avatar {
+    display: flex;
+    grid-column: span 2;
+    justify-content: center;
+    width: 250px;
+}
+.container .avatar img {
+      border-radius: 50%;
+      width: 175px;
+      object-fit: cover;
+}
+/* username */
+.container .username {
+    color: #222;
+    grid-column: span 2;
+    margin-block-start: 0.7rem;
+    margin-block-end: 2rem;
+}
+/* button */
+.container .button {
+    width: 120px;
+    background-color: transparent;
+    border: 2px solid #555;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.6s;
+}
+.container .button:hover {
+    background-color: #222;
+    color: #fff;
+}
+/* social icons */
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.social-icons a {
+    padding: 10px 20px;
+    font-size: 2em;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* page */
+
+.page {
+    position: fixed;
+    height: 100vh;
+    inset: 0;
+    width: 100%;
+    overflow: auto;
+    transform: scale(0);
+    transition: transform 0.3s;
+    background-color: #eff2f5;
+    color: #1d1e22;
+}
+
+.page .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5vw;
+    background-color: #fff;
+    font-weight: bold;
+    box-shadow: 0px 5px 5px 0px #e5e5e5;
+}
+
+.page .page-header .page-title {
+    font-size: 1.5rem;
+}
+
+.page .page-header .page-close {
+    display: flex;
+    cursor: pointer;
+}
+
+.page .page-body {
+    padding: 2rem 5vw;
+    overflow-y: auto;
+}
+
+.page--active {
+    transform: scale(1);
 }
